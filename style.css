@@ -67,7 +67,6 @@ body{
 img{
 	max-width: 100%;
 	overflow: hidden;
-	object-fit: cover;
 }
 
 .card-1{
@@ -160,6 +159,25 @@ h4, h2, h3{
 	grid-column: 2/3;
 	grid-row: 2/4;
 	background-color: white;
+	overflow: hidden;
+	align-content: flex-start;
+}
+
+.card-4 img{
+	flex-shrink: 0;
+	height: 45px;
+	animation: scrollMarquee 9s linear infinite;
+	max-width: 170%;
+	width: 170%;
+}
+
+@keyframes scrollMarquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); 
+    }
 }
 
 .card-4 h4{
@@ -228,4 +246,17 @@ h4, h2, h3{
   flex-shrink: 0;
   max-width: 100%;
   object-fit: cover;
+}
+
+@media (max-width: 768px){
+	.bento-grid{
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		gap: 9px;
+	}
+
+	.card{
+		width: 100%;
+	}
 }
