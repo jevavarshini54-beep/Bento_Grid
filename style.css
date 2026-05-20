@@ -164,9 +164,14 @@ h4, h2, h3{
 .card-4 img{
 	flex-shrink: 0;
 	animation: scrollMarquee 9s linear infinite;
-	max-width: 170%;
+	max-width: 110%;
 	width: 170%;
 	aspect-ratio: 10/2;
+}
+
+.animation{
+	display: flex;
+	flex-direction: row;
 }
 
 @keyframes scrollMarquee {
